@@ -21,3 +21,6 @@ This is the screenshot that shows I have instructor as collaborator
 <img src="./collaborators .jpg"
      alt=" my setting of collaborators"
      style="float: left; margin-right: 10px;" />
+     
+## My single line code snippet
+This is an example of a single line code snippet in JavaScript that declares a variable called myName and assigns it the value "Martin": `var myName = "John";`
