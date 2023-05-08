@@ -16,8 +16,8 @@
 5.sample table  
 6.sample hyperlink  
 
-## My Repo Collaborators Screenshot
-This is the screenshot that shows I have instructor as collaborator
-<img src="markdownmonstericon.png"
-     alt="Markdown Monster icon"
+## My Repo Collaborators Screenshot  
+This is the screenshot that shows I have instructor as collaborator  
+<img src="this is my setting of collaborators.jpg"
+     alt="this is my setting of collaborators"
      style="float: left; margin-right: 10px;" />
