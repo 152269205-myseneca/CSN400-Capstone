@@ -18,6 +18,6 @@
 
 ## My Repo Collaborators Screenshot  
 This is the screenshot that shows I have instructor as collaborator  
-<img src="CSN400-Capstone/this is my setting of collaborators.jpg"
+<img src="./collaborators .jpg"
      alt=" my setting of collaborators"
      style="float: left; margin-right: 10px;" />
