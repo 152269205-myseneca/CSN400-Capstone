@@ -83,8 +83,8 @@ Date:   Thu May 25 10:52:56 2023 -0400
 
 ## Part C - Manage Conflicts - Merge Editor
 
-```
   part3-pull-conflict:
+```
   POST git-upload-pack (375 bytes)
 From https://github.com/152269205-myseneca/CSN400-Capstone
  * branch            feat-body-text -> FETCH_HEAD
