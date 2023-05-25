@@ -49,8 +49,9 @@ To https://github.com/152269205-myseneca/CSN400-Capstone.git
 Follow the instructions and submit all files, and embed logs when asked in your README.md.
 Q:What is the color of the text after you forcefully overwrite remote with local changes?
    The color is green after overwrite remote with local changes.
-```
+
 part2-conflict-error:
+```
 Pushing to https://github.com/152269205-myseneca/CSN400-Capstone.git
 To https://github.com/152269205-myseneca/CSN400-Capstone.git
  ! [rejected]        main -> main (fetch first)
