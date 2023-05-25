@@ -1,0 +1,9 @@
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (22/22), 201.43 KiB | 9.59 MiB/s, done.
+Total 22 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.  
+To https://github.com/152269205-myseneca/CSN400-Capstone.git
+ + 2557ae3...b02a9a8 main -> main (forced update)
