@@ -19,6 +19,7 @@ Q: What is the color of the text after you forcefully overwrite remote with loca
  The color is green after overwrite remote with local changes
  
 part1-conflict-error:
+
 ```
 To https://github.com/152269205-myseneca/CSN400-Capstone.git
  ! [rejected]        main -> main (fetch first)
