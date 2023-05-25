@@ -1,0 +1,9 @@
+To https://github.com/152269205-myseneca/CSN400-Capstone.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/152269205-meca/CSN400-Capstone.git'
+hint: Updates were rejected because the remote contains work that 
+do
+hint: not have locally. This is usually caused by another repositoushing
+hint: to the same ref. You may want to first integrate the remote ges
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for ils.
