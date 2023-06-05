@@ -50,7 +50,7 @@ Follow the instructions and submit all files, and embed logs when asked in your 
 Q:What is the color of the text after you forcefully overwrite remote with local changes?
   > The color is green after overwrite remote with local changes.
 
-part2-conflict-error:
+[part2-conflict-error:](./logs/part2-conflict-error.log)
 ```bash
 Pushing to https://github.com/152269205-myseneca/CSN400-Capstone.git
 To https://github.com/152269205-myseneca/CSN400-Capstone.git
