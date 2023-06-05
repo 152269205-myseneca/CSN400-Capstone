@@ -15,7 +15,7 @@
 4. [Part D - Git Branching Strategy Review Question](#part-d---git-branching-strategy-review-question)
 
 ## Part A - Adding Files - Local Repo Workflow
-1.git_status_untracked.txt:
+1.[git_status_untracked.txt:](./git_status_untracked.txt)
 ```bash
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -31,7 +31,7 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-2.git_status_uncommitted.txt:
+2.[git_status_uncommitted.txt:](./git_status_uncommitted.txt)
 ```bash
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -45,7 +45,7 @@ Untracked files:
 	git_status_uncommitted.txt
 	git_status_untracked.txt
 ```
-3.git_status_committed.txt:
+3.[git_status_committed.txt:](./git_status_committed.txt)
 ```bash
 On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
