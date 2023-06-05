@@ -16,11 +16,11 @@
 Follow the instructions and submit all files, and embed logs when asked in your README.md. 
 
 Q: What is the color of the text after you forcefully overwrite remote with local changes?
- The color is green after overwrite remote with local changes
+ > The color is green after overwrite remote with local changes
  
-part1-conflict-error:
+[part1-conflict-error:](./logs/part1-conflict-error.log)
 
-```
+```bash
 To https://github.com/152269205-myseneca/CSN400-Capstone.git
  ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'https://github.com/152269205-meca/CSN400-Capstone.git'
@@ -31,8 +31,8 @@ hint: to the same ref. You may want to first integrate the remote ges
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for ils.
 ```
-part1-conflict-overwrite:
-```
+[part1-conflict-overwrite:](./logs/part1-conflict-overwrite.log)
+```bash
 Enumerating objects: 25, done.
 Counting objects: 100% (25/25), done.
 Delta compression using up to 8 threads
@@ -48,10 +48,10 @@ To https://github.com/152269205-myseneca/CSN400-Capstone.git
 ## Part B - Manage Conflicts - Reset Local Commit Head
 Follow the instructions and submit all files, and embed logs when asked in your README.md.
 Q:What is the color of the text after you forcefully overwrite remote with local changes?
-   The color is green after overwrite remote with local changes.
+  > The color is green after overwrite remote with local changes.
 
 part2-conflict-error:
-```
+```bash
 Pushing to https://github.com/152269205-myseneca/CSN400-Capstone.git
 To https://github.com/152269205-myseneca/CSN400-Capstone.git
  ! [rejected]        main -> main (fetch first)
@@ -62,17 +62,17 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
-part2-pull-error:
+[part2-pull-error:](.//logs/part2-pull-error.log)
 
-```
+```bash
 error: Pulling is not possible because you have unmerged files.
 hint: Fix them up in the work tree, and then use 'git add/rm <file>'
 hint: as appropriate to mark resolution and make a commit.
 fatal: Exiting because of an unresolved conflict.
  ```
   
-part2-reset-head:
-```
+[part2-reset-head:](./logs/part2-reset-head.log)
+```bash
   HEAD is now at b02a9a8 modifies style color in index.html to green
 commit 9c9a92f1e81b3bbace5ba6d147f7faf4eb4151f7
 Author: 152269205-myseneca <132917070+152269205-myseneca@users.noreply.github.com>
@@ -83,8 +83,8 @@ Date:   Thu May 25 10:52:56 2023 -0400
 
 ## Part C - Manage Conflicts - Merge Editor
 
-  part3-pull-conflict:
-```
+  [part3-pull-conflict:](./logs/part3-pull-conflict.log)
+```bash
   POST git-upload-pack (375 bytes)
 From https://github.com/152269205-myseneca/CSN400-Capstone
  * branch            feat-body-text -> FETCH_HEAD
@@ -94,8 +94,8 @@ CONFLICT (content): Merge conflict in Checkpoint3/conflict-resolution/index.html
 Automatic merge failed; fix conflicts and then commit the result.
 ```
   
-  part3-status:
-```
+  [part3-status:](./logs/part3-status.log)
+```bash
   On branch main
 Your branch is up to date with 'origin/main'.
 
