@@ -1,3 +1,0 @@
-# CSN400-Capstone
-
-
