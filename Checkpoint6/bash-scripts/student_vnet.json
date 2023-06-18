@@ -1,0 +1,96 @@
+{
+  "addressSpace": {
+    "addressPrefixes": [
+      "10.8.159.0/24"
+    ]
+  },
+  "enableDdosProtection": false,
+  "etag": "W/\"97750e7b-5c8b-411b-b4f5-cc763f9448be\"",
+  "id": "/subscriptions/e22a2bd0-d760-4866-9918-1c98f501eb6a/resourceGroups/Student-RG-955301/providers/Microsoft.Network/virtualNetworks/Student-955301-vnet",
+  "location": "canadacentral",
+  "name": "Student-955301-vnet",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "Student-RG-955301",
+  "resourceGuid": "3b7d2467-b636-40c3-b76e-da6e6997e4c0",
+  "subnets": [
+    {
+      "addressPrefix": "10.8.159.0/24",
+      "delegations": [],
+      "etag": "W/\"97750e7b-5c8b-411b-b4f5-cc763f9448be\"",
+      "id": "/subscriptions/e22a2bd0-d760-4866-9918-1c98f501eb6a/resourceGroups/Student-RG-955301/providers/Microsoft.Network/virtualNetworks/Student-955301-vnet/subnets/Virtual-Desktop-Client",
+      "name": "Virtual-Desktop-Client",
+      "privateEndpointNetworkPolicies": "Enabled",
+      "privateLinkServiceNetworkPolicies": "Enabled",
+      "provisioningState": "Succeeded",
+      "resourceGroup": "Student-RG-955301",
+      "routeTable": {
+        "id": "/subscriptions/e22a2bd0-d760-4866-9918-1c98f501eb6a/resourceGroups/Student-RG-955301/providers/Microsoft.Network/routeTables/RT-86",
+        "resourceGroup": "Student-RG-955301"
+      },
+      "type": "Microsoft.Network/virtualNetworks/subnets"
+    }
+  ],
+  "type": "Microsoft.Network/virtualNetworks",
+  "virtualNetworkPeerings": [
+    {
+      "allowForwardedTraffic": true,
+      "allowGatewayTransit": false,
+      "allowVirtualNetworkAccess": true,
+      "doNotVerifyRemoteGateways": false,
+      "etag": "W/\"97750e7b-5c8b-411b-b4f5-cc763f9448be\"",
+      "id": "/subscriptions/e22a2bd0-d760-4866-9918-1c98f501eb6a/resourceGroups/Student-RG-955301/providers/Microsoft.Network/virtualNetworks/Student-955301-vnet/virtualNetworkPeerings/Student-Bastion955301",
+      "name": "Student-Bastion955301",
+      "peeringState": "Connected",
+      "peeringSyncLevel": "FullyInSync",
+      "provisioningState": "Succeeded",
+      "remoteAddressSpace": {
+        "addressPrefixes": [
+          "172.16.0.0/16"
+        ]
+      },
+      "remoteVirtualNetwork": {
+        "id": "/subscriptions/e22a2bd0-d760-4866-9918-1c98f501eb6a/resourceGroups/Bastion_RG/providers/Microsoft.Network/virtualNetworks/Bastion-Vnet",
+        "resourceGroup": "Bastion_RG"
+      },
+      "remoteVirtualNetworkAddressSpace": {
+        "addressPrefixes": [
+          "172.16.0.0/16"
+        ]
+      },
+      "resourceGroup": "Student-RG-955301",
+      "resourceGuid": "2e0a984b-9a2e-0f6e-3de7-7624bfbb14dc",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "useRemoteGateways": false
+    },
+    {
+      "allowForwardedTraffic": true,
+      "allowGatewayTransit": false,
+      "allowVirtualNetworkAccess": true,
+      "doNotVerifyRemoteGateways": false,
+      "etag": "W/\"97750e7b-5c8b-411b-b4f5-cc763f9448be\"",
+      "id": "/subscriptions/e22a2bd0-d760-4866-9918-1c98f501eb6a/resourceGroups/Student-RG-955301/providers/Microsoft.Network/virtualNetworks/Student-955301-vnet/virtualNetworkPeerings/StudenttoRouter",
+      "name": "StudenttoRouter",
+      "peeringState": "Connected",
+      "peeringSyncLevel": "FullyInSync",
+      "provisioningState": "Succeeded",
+      "remoteAddressSpace": {
+        "addressPrefixes": [
+          "192.168.86.0/24"
+        ]
+      },
+      "remoteVirtualNetwork": {
+        "id": "/subscriptions/e22a2bd0-d760-4866-9918-1c98f501eb6a/resourceGroups/Student-RG-955301/providers/Microsoft.Network/virtualNetworks/Router-86",
+        "resourceGroup": "Student-RG-955301"
+      },
+      "remoteVirtualNetworkAddressSpace": {
+        "addressPrefixes": [
+          "192.168.86.0/24"
+        ]
+      },
+      "resourceGroup": "Student-RG-955301",
+      "resourceGuid": "2638b3bc-8d90-0c92-2240-d729fd403494",
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "useRemoteGateways": false
+    }
+  ]
+}
