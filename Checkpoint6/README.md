@@ -146,14 +146,25 @@ canadacentral  LS-NSG-86  Succeeded            Student-RG-955301  3a7cb027-c86f-
 canadacentral  WC-NSG-86  Succeeded            Student-RG-955301  64d4010e-517a-49e4-8c03-802e4bc00e7b
 canadacentral  WS-NSG-86  Succeeded            Student-RG-955301  edaa0585-0aa8-4845-a897-07f148632f19
 ```
-Q4.I used: 
+Q4.I used:
 ```
 az vm list --output table
 ```
->I can see after deleting all the VMs, it disapeared from the output list one by one.
+>I can see after deleting all the VMs, it disapeared from the output list one by one. I also checked the Azure portal to see if they are still there.
+
+This is the screenshot of deleting the VMs
+
+<img src="./bash-scripts/deletevm.jpg"
+     alt="deletevms "
+     style="display: block; margin-right: 10px;" />
+
+
+
+
+
 
 Q5:
-> This is the screenshot of auto shutdown configuration
+ This is the screenshot of auto shutdown configuration
 
 <img src="./bash-scripts/autoshutdown.jpg"
      alt="autoshutdown "
