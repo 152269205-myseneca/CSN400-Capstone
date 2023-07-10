@@ -1,0 +1,22 @@
+  list current iptables status
+Chain INPUT (policy ACCEPT 1 packets, 40 bytes)
+num   pkts bytes target     prot opt in     out     source               destination
+1        8   320 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
+2        0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0
+3        0     0 ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0
+4        0     0 ACCEPT     tcp  --  *      *       10.8.159.0/24        0.0.0.0/0            state NEW tcp dpt:22
+5        0     0 LOG        all  --  *      *       0.0.0.0/0            0.0.0.0/0            limit: avg 10/sec burst 5 LOG flags 0 level 4 prefix "TO_DROP_INPUT"
+6        0     0 DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination
+1        0     0 ACCEPT     tcp  --  *      *       10.8.159.0/24        172.17.86.32/27      tcp dpt:22
+2        0     0 ACCEPT     tcp  --  *      *       172.17.86.32/27      10.8.159.0/24        tcp spt:22
+3        0     0 ACCEPT     tcp  --  *      *       10.8.159.0/24        172.17.86.32/27      tcp dpt:3389
+4        0     0 ACCEPT     tcp  --  *      *       172.17.86.32/27      10.8.159.0/24        tcp spt:3389
+5        0     0 LOG        all  --  *      *       0.0.0.0/0            0.0.0.0/0            limit: avg 10/sec burst 5 LOG flags 0 level 4 prefix "TO_DROP_FORWARD"
+6        0     0 DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0
+
+Chain OUTPUT (policy ACCEPT 4115 packets, 729K bytes)
+num   pkts bytes target     prot opt in     out     source               destination
+1        1   156 ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0
