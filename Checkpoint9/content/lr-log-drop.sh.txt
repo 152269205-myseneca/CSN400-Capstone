@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Set default policies
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+
+# Flush any existing rules
+iptables -F
+
+# INPUT chain rules
+iptables -A INPUT -p tcp -m state --state RELATED,ESTABLISHED -j ACCEPT
+iptables -A INPUT -p icmp -j ACCEPT
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -p tcp -s 10.8.159.0/24 --dport 22 -m state --state NEW -j ACCEPT
+iptables -A INPUT -m limit --limit 10/sec --limit-burst 5 -j LOG --log-prefix "TO_DROP_INPUT" --log-level 4
+iptables -A INPUT -j DROP
+
+# FORWARD chain rules
+# Insert rules to DROP and LOG FTP traffic
+iptables -A FORWARD -p tcp --dport 21 -d 172.17.86.36 -j LOG --log-prefix "FTP_DROP "
+iptables -A FORWARD -p tcp --dport 21 -d 172.17.86.36 -j DROP
+
+# Insert rules to DROP and LOG SSH traffic
+iptables -A FORWARD -p tcp --sport 22 -s 172.17.86.37 -j LOG --log-prefix "SSH_DROP "
+iptables -A FORWARD -p tcp --sport 22 -s 172.17.86.37 -j DROP
+
+iptables -A FORWARD -p tcp --dport 53 -d 172.17.86.36 -j ACCEPT
+iptables -A FORWARD -p tcp --sport 53 -s 172.17.86.36 -j ACCEPT
+iptables -A FORWARD -p udp --dport 53 -d 172.17.86.36 -j ACCEPT
+iptables -A FORWARD -p udp --sport 53 -s 172.17.86.36 -j ACCEPT
+iptables -A FORWARD -p tcp -s 10.8.159.0/24 --dport 3306 -d 172.17.86.37 -j ACCEPT
+iptables -A FORWARD -p tcp -s 172.17.86.37 --sport 3306 -d 10.8.159.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp -s 10.8.159.0/24 --dport 80 -d 172.17.86.37 -j ACCEPT
+iptables -A FORWARD -p tcp -s 172.17.86.37 --sport 80 -d 10.8.159.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp -s 10.8.159.0/24 --dport 80 -d 172.17.86.36 -j ACCEPT
+iptables -A FORWARD -p tcp -s 172.17.86.36 --sport 80 -d 10.8.159.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp -s 10.8.159.0/24 --dport 21 -d 172.17.86.36 -j ACCEPT
+iptables -A FORWARD -p tcp -s 172.17.86.36 --sport 21 -d 10.8.159.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp -s 10.8.159.0/24 --dport 50000:51000 -d 172.17.86.36 -j ACCEPT
+iptables -A FORWARD -p tcp -s 172.17.86.36 --sport 50000:51000 -d 10.8.159.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp -s 10.8.159.0/24 --dport 22 -d 172.17.86.32/27 -j ACCEPT
+iptables -A FORWARD -p tcp -s 172.17.86.32/27 --sport 22 -d 10.8.159.0/24 -j ACCEPT
+iptables -A FORWARD -p tcp -s 10.8.159.0/24 --dport 3389 -d 172.17.86.32/27 -j ACCEPT
+iptables -A FORWARD -p tcp -s 172.17.86.32/27 --sport 3389 -d 10.8.159.0/24 -j ACCEPT
+iptables -A FORWARD -m limit --limit 10/sec --limit-burst 5 -j LOG --log-prefix "TO_DROP_FORWARD" --log-level 4
+iptables -A FORWARD -j DROP
+
+# OUTPUT chain rules
+iptables -A OUTPUT -j ACCEPT
