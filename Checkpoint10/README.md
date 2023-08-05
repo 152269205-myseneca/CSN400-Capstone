@@ -60,7 +60,7 @@ Result
 
 ### Part B - Port Forwarding Basic Connectivity
 
-- [nat_basic-connectivity.sh.txt](./content/nat_basic-connectivity.sh.txt)
+- [nat_basic-connectivity.sh](./content/nat_basic-connectivity.sh)
 ```bash
 # to flush NAT tables
 
@@ -93,7 +93,7 @@ iptables -t nat -A PREROUTING -p tcp --dport 1386 -j DNAT --to-destination 172.1
 
 /
 
-- [firewalls-cp10.sh.txt](./content/firewalls-cp10.sh.txt)
+- [firewalls-cp10.sh](./content/firewalls-cp10.sh)
 
 ### Part C - Logging & Isolating Masqueraded Packets
 
